@@ -28,3 +28,13 @@ async def get_monthly_sales(month: int, year: int):
         "total_amount": total_amount,
         "transaction_count": transaction_count
     }
+
+@app.get("/untested-feature")
+def untested_feature():
+    # Этот код добавит много строк, которые не будут выполнены тестами
+    print("Step 1")
+    print("Step 2")
+    print("Step 3")
+    print("Step 4")
+    print("Step 5")
+    return {"status": "not covered"}

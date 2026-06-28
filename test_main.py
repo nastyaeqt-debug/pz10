@@ -5,6 +5,7 @@ from main import app, db_sales
 
 client = TestClient(app)
 
+# написать фикстуру для заполнения БД тестовыми данными за разные даты
 @pytest.fixture
 def setup_test_data():
     """Фикстура для заполнения БД тестовыми данными"""
@@ -18,6 +19,7 @@ def setup_test_data():
     db_sales.extend(data)
     yield
     db_sales.clear()
+
 
 def test_get_monthly_sales_report(setup_test_data):
     """E2E тест: Запрос -> Фильтрация -> Агрегация"""
