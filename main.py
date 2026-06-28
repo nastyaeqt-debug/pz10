@@ -38,3 +38,11 @@ def untested_feature():
     print("Step 4")
     print("Step 5")
     return {"status": "not covered"}
+
+def function1():
+    print("No test here")
+    return 1
+
+def function2():
+    print("No test here either")
+    return 2
